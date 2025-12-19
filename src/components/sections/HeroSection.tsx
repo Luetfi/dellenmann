@@ -1,14 +1,8 @@
 import { Phone, Star, ArrowRight, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
-  const scrollToContact = () => {
-    const element = document.querySelector("#kontakt");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section className="relative min-h-screen flex items-center bg-secondary pt-32 pb-16 overflow-hidden">
       {/* Background Pattern */}
@@ -51,12 +45,14 @@ const HeroSection = () => {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up" style={{ animationDelay: '0.3s' }}>
             <Button 
-              onClick={scrollToContact}
+              asChild
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg px-8 py-6 btn-glow-red group"
             >
-              Schaden melden
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              <Link to="/schaden-melden">
+                Schaden melden
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </Button>
             <Button 
               variant="outline"
