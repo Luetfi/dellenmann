@@ -12,7 +12,7 @@ const Header = () => {
     { label: "Prozess", href: "#prozess" },
     { label: "Galerie", href: "/galerie" },
     { label: "FAQ", href: "#faq" },
-    { label: "Kontakt", href: "#kontakt" },
+    { label: "Kontakt", href: "/kontakt" },
   ];
 
   const scrollToSection = (href: string) => {
@@ -80,10 +80,10 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-4">
             <Button 
-              onClick={() => scrollToSection("#kontakt")}
+              asChild
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold btn-glow-red"
             >
-              Schaden melden
+              <Link to="/schaden-melden">Schaden melden</Link>
             </Button>
           </div>
 
@@ -121,10 +121,10 @@ const Header = () => {
                 )
               ))}
               <Button 
-                onClick={() => scrollToSection("#kontakt")}
+                asChild
                 className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold mt-2"
               >
-                Schaden melden
+                <Link to="/schaden-melden">Schaden melden</Link>
               </Button>
             </div>
           </div>
