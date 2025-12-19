@@ -55,13 +55,13 @@ const HeroSection = () => {
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg px-8 py-6 btn-glow-red group"
             >
-              Angebot anfragen
+              Schaden melden
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button 
               variant="outline"
               size="lg"
-              className="border-secondary-foreground/30 text-secondary-foreground hover:bg-secondary-foreground/10 font-semibold text-lg px-8 py-6"
+              className="border-accent bg-accent/10 text-accent hover:bg-accent/20 font-semibold text-lg px-8 py-6"
               asChild
             >
               <a href="tel:+491234567890">
