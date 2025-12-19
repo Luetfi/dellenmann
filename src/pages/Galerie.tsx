@@ -86,7 +86,7 @@ const GaleriePage = () => {
               Vorher-Nachher <span className="text-primary">Galerie</span>
             </h1>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Überzeugen Sie sich selbst von unserer Arbeit. Sehen Sie echte Ergebnisse unserer Dellenreparaturen.
+              Überzeugen Sie sich selbst von meiner Arbeit. Sehen Sie echte Ergebnisse meiner Dellenreparaturen – persönlich durchgeführt vom Dellenmann.
             </p>
           </div>
 
