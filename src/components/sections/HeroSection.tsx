@@ -39,7 +39,7 @@ const HeroSection = () => {
           {/* Mobile Service Highlight */}
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary border border-primary/20 px-5 py-3 rounded-xl text-sm md:text-base font-medium mb-8 animate-fade-up" style={{ animationDelay: '0.25s' }}>
             <MapPin className="w-5 h-5" />
-            <span>Mobiler Service im Umkreis von 20km um Stuttgart – wir kommen zu Ihnen!</span>
+            <span>Mobiler Service im Umkreis von 20km um Stuttgart – ich komme zu Ihnen!</span>
           </div>
 
           {/* CTAs */}
