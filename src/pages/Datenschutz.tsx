@@ -56,6 +56,48 @@ const Datenschutz = () => {
               <section>
                 <h2 className="font-display text-2xl text-secondary-foreground mb-4">3. Datenerfassung auf dieser Website</h2>
                 
+                <h3 className="font-display text-xl text-secondary-foreground/90 mb-3">Cookies</h3>
+                <p className="leading-relaxed mb-4">
+                  Unsere Website verwendet Cookies. Cookies sind kleine Textdateien, die auf Ihrem Endgerät gespeichert werden 
+                  und die Ihr Browser speichert. Cookies richten auf Ihrem Endgerät keinen Schaden an, enthalten keine Viren, 
+                  Trojaner oder sonstige Schadsoftware.
+                </p>
+                <p className="leading-relaxed mb-4">
+                  Wir setzen verschiedene Arten von Cookies ein:
+                </p>
+                <div className="bg-secondary/30 rounded-lg p-6 mb-4">
+                  <h4 className="font-semibold text-secondary-foreground mb-3">Notwendige Cookies</h4>
+                  <p className="leading-relaxed mb-3">
+                    Diese Cookies sind für die Grundfunktionen der Website erforderlich und können nicht deaktiviert werden. 
+                    Sie werden in der Regel nur als Reaktion auf von Ihnen vorgenommene Aktionen gesetzt, wie z.B. das Speichern 
+                    Ihrer Cookie-Einstellungen.
+                  </p>
+                  <p className="text-sm text-secondary-foreground/60">
+                    Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)
+                  </p>
+                </div>
+                <div className="bg-secondary/30 rounded-lg p-6 mb-6">
+                  <h4 className="font-semibold text-secondary-foreground mb-3">Externe Dienste (Google Maps)</h4>
+                  <p className="leading-relaxed mb-3">
+                    Für die Anzeige von Karteninhalten nutzen wir Google Maps. Diese Cookies werden nur gesetzt, wenn Sie 
+                    dies ausdrücklich über unser Cookie-Banner erlauben. Hierbei kann Ihre IP-Adresse an Google übermittelt werden.
+                  </p>
+                  <p className="text-sm text-secondary-foreground/60">
+                    Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)
+                  </p>
+                </div>
+                <p className="leading-relaxed mb-4">
+                  <strong className="text-secondary-foreground">Cookie-Verwaltung:</strong> Sie können Ihre Cookie-Einstellungen 
+                  jederzeit über den Cookie-Button am unteren linken Bildschirmrand anpassen oder widerrufen. Die meisten Browser 
+                  akzeptieren Cookies automatisch. Sie können Ihren Browser jedoch so konfigurieren, dass keine Cookies auf Ihrem 
+                  Computer gespeichert werden oder stets ein Hinweis erscheint, bevor ein neues Cookie angelegt wird.
+                </p>
+                <p className="leading-relaxed mb-6">
+                  <strong className="text-secondary-foreground">Speicherdauer:</strong> Notwendige Cookies werden lokal in Ihrem 
+                  Browser gespeichert und bleiben bestehen, bis Sie diese löschen oder Ihre Einstellungen ändern. Die Speicherung 
+                  Ihrer Cookie-Präferenzen erfolgt in Ihrem Browser (LocalStorage).
+                </p>
+
                 <h3 className="font-display text-xl text-secondary-foreground/90 mb-3">Kontaktformulare</h3>
                 <p className="leading-relaxed mb-4">
                   Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular 

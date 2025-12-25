@@ -26,6 +26,10 @@ export const getCookieConsent = (): CookieConsent | null => {
   return null;
 };
 
+export const reopenCookieBanner = () => {
+  window.dispatchEvent(new CustomEvent('reopenCookieBanner'));
+};
+
 const CookieBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
@@ -38,6 +42,14 @@ const CookieBanner = () => {
       const timer = setTimeout(() => setIsVisible(true), 1000);
       return () => clearTimeout(timer);
     }
+
+    // Listen for reopen event
+    const handleReopen = () => {
+      setIsVisible(true);
+      setShowSettings(false);
+    };
+    window.addEventListener('reopenCookieBanner', handleReopen);
+    return () => window.removeEventListener('reopenCookieBanner', handleReopen);
   }, []);
 
   const saveConsent = (newConsent: CookieConsent) => {
@@ -93,7 +105,7 @@ const CookieBanner = () => {
               <Button
                 onClick={() => setShowSettings(true)}
                 variant="outline"
-                className="flex-1 border-secondary-foreground/20 text-secondary-foreground hover:bg-secondary/50"
+                className="flex-1 border-secondary-foreground/20 text-black hover:text-secondary-foreground hover:bg-secondary/50"
               >
                 <Settings className="w-4 h-4 mr-2" />
                 Einstellungen
