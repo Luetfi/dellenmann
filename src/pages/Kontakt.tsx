@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import ConsentGoogleMap from "@/components/ConsentGoogleMap";
 
 const Kontakt = () => {
   const { toast } = useToast();
@@ -218,15 +219,10 @@ const Kontakt = () => {
 
               {/* Map */}
               <div className="bg-dellen-dark rounded-xl overflow-hidden h-64">
-                <iframe 
+                <ConsentGoogleMap
                   src="https://maps.google.com/maps?q=Gansäcker+8,+74321+Bietigheim-Bissingen&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
                   title="DellenMann Standort"
+                  className="w-full h-full"
                 />
               </div>
               <a
