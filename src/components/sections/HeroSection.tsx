@@ -56,7 +56,7 @@ const HeroSection = () => {
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg px-8 py-6 btn-glow-red group"
             >
               <Link to="/schaden-melden">
-                Schaden melden test
+                Schaden melden
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
