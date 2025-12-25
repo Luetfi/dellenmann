@@ -114,12 +114,12 @@ const Footer = () => {
             © {currentYear} DellenMann. Alle Rechte vorbehalten.
           </p>
           <div className="flex gap-6 text-sm">
-            <a href="#" className="text-secondary-foreground/50 hover:text-primary transition-colors">
+            <Link to="/impressum" className="text-secondary-foreground/50 hover:text-primary transition-colors">
               Impressum
-            </a>
-            <a href="#" className="text-secondary-foreground/50 hover:text-primary transition-colors">
+            </Link>
+            <Link to="/datenschutz" className="text-secondary-foreground/50 hover:text-primary transition-colors">
               Datenschutz
-            </a>
+            </Link>
           </div>
         </div>
       </div>
