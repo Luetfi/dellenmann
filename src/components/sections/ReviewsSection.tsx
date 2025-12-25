@@ -2,28 +2,28 @@ import { Star, Quote, ExternalLink } from "lucide-react";
 
 const reviews = [
   {
-    name: "Thomas M.",
+    name: "Denisa Pllana",
     rating: 5,
-    text: "Hagelschaden am Dach perfekt beseitigt! Absolut professionelle Arbeit, man sieht nichts mehr. Sehr zu empfehlen!",
-    date: "vor 2 Wochen"
+    text: "Ich bin extra aus der Schweiz angereist, weil mir viele andere Werkstätten gesagt hatten, dass die Delle an meinem Auto nicht mehr repariert werden könne. Die Reparatur wurde schnell erledigt, die Qualität ist erstklassig und der Preis war wirklich fair. Von der Delle sieht man jetzt wirklich nichts mehr. Die Kommunikation war durchweg freundlich, transparent und professionell.",
+    date: "Google Bewertung"
   },
   {
-    name: "Sandra K.",
+    name: "E. D.",
     rating: 5,
-    text: "Schnell, zuverlässig und super Ergebnis. Die Delle in meiner Fahrertür ist wie weggeblasen. Fairer Preis!",
-    date: "vor 1 Monat"
+    text: "Absolute Empfehlung! Mein Auto hatte mehrere unschöne Parkdellen, und ich war wirklich skeptisch, ob man das wieder perfekt hinbekommt. Der Dellendoktor hat großartige Arbeit geleistet, keine Spur mehr von den Dellen, als wäre nie etwas gewesen. Sehr freundlicher Kontakt, schnelle Terminvergabe und fairer Preis.",
+    date: "Google Bewertung"
   },
   {
-    name: "Michael B.",
+    name: "M U",
     rating: 5,
-    text: "Als Autohaus arbeiten wir regelmäßig mit DellenMann zusammen. Immer top Qualität und termingerecht!",
-    date: "vor 1 Monat"
+    text: "Ich bin absolut begeistert! Der Dellenmann in Stuttgart hat an meinem Auto mehrere unschöne Dellen perfekt entfernt – und das Ergebnis ist einfach unglaublich. Man sieht absolut nichts mehr, als wäre nie etwas gewesen. Saubere, schnelle und professionelle Arbeit zu einem fairen Preis. Der Mann versteht sein Handwerk zu 100%!",
+    date: "Google Bewertung"
   },
   {
-    name: "Julia R.",
+    name: "Daniel Timpe",
     rating: 5,
-    text: "Vom Erstkontakt bis zur Abholung alles einwandfrei. Transparente Preise und hervorragendes Ergebnis.",
-    date: "vor 2 Monaten"
+    text: "Sehr korrekter Mensch, super Arbeit, eine Delle auf der Haube komplett weg, und andere auch sehr gutes Ergebnis ohne zu lackieren. Bin super zufrieden! Und alles zu einem sehr fairem Preis. Komme gerne wieder wenn ich was hab.",
+    date: "Google Bewertung"
   }
 ];
 
@@ -35,7 +35,7 @@ const ReviewsSection = () => {
         <div className="text-center mb-12">
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">Kundenstimmen</span>
           <h2 className="font-display text-3xl md:text-4xl text-foreground mt-3 mb-4">
-            Das sagen unsere <span className="text-primary">Kunden</span>
+            Das sagen meine <span className="text-primary">Kunden</span>
           </h2>
         </div>
 
@@ -46,12 +46,14 @@ const ReviewsSection = () => {
               <Star key={i} className="w-8 h-8 text-yellow-400 fill-yellow-400" />
             ))}
           </div>
-          <div className="font-display text-4xl font-bold text-secondary-foreground mb-2">4,9</div>
+          <div className="font-display text-4xl font-bold text-secondary-foreground mb-2">5,0</div>
           <p className="text-secondary-foreground/70">
-            bei über <span className="text-primary font-semibold">100+ Google Bewertungen</span>
+            bei über <span className="text-primary font-semibold">20+ Google Bewertungen</span>
           </p>
           <a 
-            href="#" 
+            href="https://maps.app.goo.gl/XtitGtDHiQBjbYMCA"
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center gap-2 text-accent hover:text-accent/80 mt-4 text-sm font-medium transition-colors"
           >
             Alle Bewertungen ansehen
@@ -64,7 +66,7 @@ const ReviewsSection = () => {
           {reviews.map((review, index) => (
             <div 
               key={review.name}
-              className="bg-card rounded-xl p-6 border border-border animate-fade-up"
+              className="bg-card rounded-xl p-6 border border-border animate-fade-up hover:border-primary/30 hover:shadow-lg transition-all duration-300 cursor-pointer"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <Quote className="w-8 h-8 text-primary/20 mb-4" />

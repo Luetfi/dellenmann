@@ -32,7 +32,7 @@ const Kontakt = () => {
     
     toast({
       title: "Nachricht gesendet!",
-      description: "Vielen Dank für Ihre Anfrage. Wir melden uns schnellstmöglich bei Ihnen.",
+      description: "Vielen Dank für Ihre Anfrage. Ich melde mich schnellstmöglich bei Ihnen.",
     });
     
     setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
@@ -43,7 +43,7 @@ const Kontakt = () => {
     <div className="min-h-screen bg-secondary">
       <Header />
       
-      <main className="pt-32 pb-16">
+      <main className="pt-40 pb-16">
         <div className="container-narrow">
           {/* Page Header */}
           <div className="text-center mb-12">
@@ -52,15 +52,15 @@ const Kontakt = () => {
               Allgemeine <span className="text-primary">Anfragen</span>
             </h1>
             <p className="text-secondary-foreground/70 max-w-2xl mx-auto text-lg">
-              Haben Sie Fragen zu unseren Leistungen oder möchten Sie mehr erfahren? 
-              Kontaktieren Sie uns – wir helfen Ihnen gerne weiter.
+              Haben Sie Fragen zu meinen Leistungen oder möchten Sie mehr erfahren? 
+              Kontaktieren Sie mich – ich helfe Ihnen gerne weiter.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div className="bg-dellen-dark rounded-2xl p-8 animate-fade-up">
-              <h2 className="font-display text-2xl text-secondary-foreground mb-6">Schreiben Sie uns</h2>
+              <h2 className="font-display text-2xl text-secondary-foreground mb-6">Schreiben Sie mir</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
@@ -124,7 +124,7 @@ const Kontakt = () => {
                     value={formData.message}
                     onChange={handleInputChange}
                     required
-                    placeholder="Wie können wir Ihnen helfen?"
+                    placeholder="Wie kann ich Ihnen helfen?"
                     rows={5}
                     className="bg-secondary border-secondary-foreground/20 text-secondary-foreground placeholder:text-secondary-foreground/40 resize-none"
                   />
@@ -152,7 +152,7 @@ const Kontakt = () => {
               {/* Contact Cards */}
               <div className="grid sm:grid-cols-2 gap-4">
                 <a 
-                  href="tel:+491234567890"
+                  href="tel:+491623236262"
                   className="bg-dellen-dark rounded-xl p-6 flex items-start gap-4 hover:bg-dellen-dark/80 transition-colors group"
                 >
                   <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center group-hover:bg-primary transition-colors">
@@ -160,12 +160,12 @@ const Kontakt = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-secondary-foreground mb-1">Telefon</h4>
-                    <p className="text-secondary-foreground/70 text-sm">+49 123 456 7890</p>
+                    <p className="text-secondary-foreground/70 text-sm">0162 3236262</p>
                   </div>
                 </a>
 
                 <a 
-                  href="mailto:info@dellenmann.de"
+                  href="mailto:info@dellen-mann.de"
                   className="bg-dellen-dark rounded-xl p-6 flex items-start gap-4 hover:bg-dellen-dark/80 transition-colors group"
                 >
                   <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center group-hover:bg-primary transition-colors">
@@ -173,7 +173,7 @@ const Kontakt = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-secondary-foreground mb-1">E-Mail</h4>
-                    <p className="text-secondary-foreground/70 text-sm">info@dellenmann.de</p>
+                    <p className="text-secondary-foreground/70 text-sm">info@dellen-mann.de</p>
                   </div>
                 </a>
               </div>
@@ -187,8 +187,8 @@ const Kontakt = () => {
                   <div>
                     <h4 className="font-semibold text-secondary-foreground mb-1">Adresse</h4>
                     <p className="text-secondary-foreground/70 text-sm">
-                      Musterstraße 123<br />
-                      12345 Musterstadt
+                      Gansäcker 8<br />
+                      74321 Bietigheim-Bissingen
                     </p>
                   </div>
                 </div>
@@ -203,15 +203,11 @@ const Kontakt = () => {
                   <div>
                     <h4 className="font-semibold text-secondary-foreground mb-3">Öffnungszeiten</h4>
                     <div className="space-y-2 text-sm">
-                      <div className="flex justify-between text-secondary-foreground/70">
-                        <span>Montag - Freitag</span>
-                        <span className="text-accent">08:00 - 18:00</span>
+                      <div className="flex justify-between gap-8 text-secondary-foreground/70">
+                          <span>Montag - Samstag</span>
+                          <span className="text-accent">09:00 - 20:00</span>
                       </div>
-                      <div className="flex justify-between text-secondary-foreground/70">
-                        <span>Samstag</span>
-                        <span className="text-accent">09:00 - 14:00</span>
-                      </div>
-                      <div className="flex justify-between text-secondary-foreground/50">
+                      <div className="flex justify-between gap-8 text-secondary-foreground/50">
                         <span>Sonntag</span>
                         <span>Geschlossen</span>
                       </div>
@@ -220,15 +216,27 @@ const Kontakt = () => {
                 </div>
               </div>
 
-              {/* Map Placeholder */}
-              <div className="bg-dellen-dark rounded-xl overflow-hidden h-48">
-                <div className="w-full h-full flex items-center justify-center text-secondary-foreground/30">
-                  <div className="text-center">
-                    <MapPin className="w-8 h-8 mx-auto mb-2" />
-                    <p className="text-sm">Google Maps hier einfügen</p>
-                  </div>
-                </div>
+              {/* Map */}
+              <div className="bg-dellen-dark rounded-xl overflow-hidden h-64">
+                <iframe 
+                  src="https://maps.google.com/maps?q=Gansäcker+8,+74321+Bietigheim-Bissingen&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="DellenMann Standort"
+                />
               </div>
+              <a
+                href="https://maps.app.goo.gl/5rr36bvcdiyF6hMKA"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 text-accent hover:text-accent/80 text-sm font-medium mt-3"
+              >
+                Route in Google Maps öffnen
+              </a>
             </div>
           </div>
         </div>

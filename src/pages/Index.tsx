@@ -21,6 +21,20 @@ const Index = () => {
         <FAQSection />
         <ContactSection />
       </main>
+      <section className="bg-secondary/50">
+        <div className="w-full h-[420px]">
+          <iframe
+            src="https://maps.google.com/maps?q=Gans%C3%A4cker+8,+74321+Bietigheim-Bissingen&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="DellenMann Standort"
+          />
+        </div>
+      </section>
       <Footer />
     </div>
   );

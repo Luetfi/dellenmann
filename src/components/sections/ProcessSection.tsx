@@ -5,25 +5,25 @@ const steps = [
     number: "01",
     icon: MessageSquare,
     title: "Kontakt aufnehmen",
-    description: "Rufen Sie uns an oder nutzen Sie unser Kontaktformular mit Foto-Upload für eine erste Einschätzung."
+    description: "Rufen Sie mich an oder nutzen Sie mein Kontaktformular mit Foto-Upload für eine erste Einschätzung."
   },
   {
     number: "02",
     icon: Search,
     title: "Begutachtung",
-    description: "Wir analysieren den Schaden vor Ort und erstellen ein kostenloses Festpreisangebot."
+    description: "Ich analysiere den Schaden vor Ort oder über die Fotos vom Schaden-melden-Formular und erstelle ein kostenloses Festpreisangebot."
   },
   {
     number: "03",
     icon: Wrench,
     title: "Reparatur",
-    description: "Unsere Spezialisten beheben die Dellen präzise und lackierfrei mit PDR-Technik."
+    description: "Ich behebe die Dellen präzise und lackierfrei mit professioneller PDR-Technik. Der Originallack bleibt dabei vollständig erhalten – für ein perfektes Ergebnis."
   },
   {
     number: "04",
     icon: CheckCircle,
     title: "Qualitätscheck",
-    description: "Nach gründlicher Endkontrolle übergeben wir Ihnen Ihr makelloses Fahrzeug."
+    description: "Nach gründlicher Endkontrolle übergebe ich Ihnen Ihr makelloses Fahrzeug."
   }
 ];
 
@@ -55,7 +55,7 @@ const ProcessSection = () => {
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
                 {/* Step Card */}
-                <div className="bg-dellen-dark rounded-2xl p-6 border border-secondary-foreground/10 hover:border-primary/30 transition-all duration-300 group">
+                <div className="bg-dellen-dark rounded-2xl p-6 border border-secondary-foreground/10 hover:border-primary/30 transition-all duration-300 group h-full flex flex-col">
                   {/* Number Badge */}
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground w-10 h-10 rounded-full flex items-center justify-center font-display font-bold text-sm shadow-lg">
                     {step.number}
@@ -69,7 +69,7 @@ const ProcessSection = () => {
                   <h3 className="font-display font-semibold text-lg text-secondary-foreground mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-secondary-foreground/60 text-sm leading-relaxed">
+                  <p className="text-secondary-foreground/60 text-sm leading-relaxed flex-grow">
                     {step.description}
                   </p>
                 </div>

@@ -8,7 +8,7 @@ import {
 const faqs = [
   {
     question: "Wie lange dauert eine Dellenreparatur?",
-    answer: "Die Dauer hängt von der Anzahl und Größe der Dellen ab. Eine einzelne Parkdelle kann oft in 30-60 Minuten repariert werden. Bei Hagelschäden mit vielen Dellen sollten Sie mit einem halben bis ganzen Tag rechnen. Wir geben Ihnen vorab eine genaue Zeiteinschätzung."
+    answer: "Die Dauer hängt von der Anzahl und Größe der Dellen ab. Eine einzelne Parkdelle kann oft in 30-60 Minuten repariert werden. Bei Hagelschäden mit vielen Dellen sollten Sie mit einem halben bis ganzen Tag rechnen. Ich gebe Ihnen vorab eine genaue Zeiteinschätzung."
   },
   {
     question: "Bleibt der Originallack wirklich erhalten?",
@@ -16,27 +16,27 @@ const faqs = [
   },
   {
     question: "Wie viel kostet eine Dellenreparatur ungefähr?",
-    answer: "Die Kosten variieren je nach Größe, Lage und Anzahl der Dellen. Kleine Parkdellen starten ab ca. 50-80€. Für ein verbindliches Angebot bieten wir eine kostenlose Begutachtung an. Sie erhalten immer einen Festpreis vor der Reparatur."
+    answer: "Die Kosten variieren je nach Größe, Lage und Anzahl der Dellen. Kleine Parkdellen starten ab ca. 50-80€. Für ein verbindliches Angebot biete ich eine kostenlose Begutachtung an. Sie erhalten immer einen Festpreis vor der Reparatur."
   },
   {
     question: "Muss ich einen Termin vereinbaren?",
-    answer: "Ja, wir empfehlen eine Terminvereinbarung, um Wartezeiten zu vermeiden und ausreichend Zeit für Ihr Fahrzeug einzuplanen. Sie können uns telefonisch erreichen oder unser Kontaktformular nutzen."
+    answer: "Ja, ich empfehle eine Terminvereinbarung, um Wartezeiten zu vermeiden und ausreichend Zeit für Ihr Fahrzeug einzuplanen. Sie können mich telefonisch erreichen oder das Kontaktformular nutzen."
   },
   {
     question: "Kann ich Hagelschäden über die Versicherung abrechnen?",
-    answer: "Ja, Hagelschäden werden in der Regel von der Teilkasko-Versicherung übernommen. Wir unterstützen Sie bei der Abwicklung und erstellen eine detaillierte Dokumentation für Ihre Versicherung."
+    answer: "Ja, Hagelschäden werden in der Regel von der Teilkasko-Versicherung übernommen. Ich unterstütze Sie bei der Abwicklung und erstelle eine detaillierte Dokumentation für Ihre Versicherung."
   },
   {
     question: "Welche Schäden können nicht lackierfrei entfernt werden?",
-    answer: "Dellen mit Lackrissen, sehr scharfkantigen Beschädigungen oder stark gedehntem Blech können unter Umständen nicht zu 100% lackierfrei repariert werden. In solchen Fällen beraten wir Sie ehrlich über die bestmögliche Lösung."
+    answer: "Dellen mit Lackrissen, sehr scharfkantigen Beschädigungen oder stark gedehntem Blech können unter Umständen nicht zu 100% lackierfrei repariert werden. In solchen Fällen berate ich Sie ehrlich über die bestmögliche Lösung."
   },
   {
     question: "Bieten Sie auch einen mobilen Service an?",
-    answer: "Ja, für Autohäuser, Flottenkunden und auf Anfrage auch für Privatkunden bieten wir einen mobilen Service an. Wir kommen direkt zu Ihnen und führen die Reparatur vor Ort durch."
+    answer: "Ja, für Autohäuser, Flottenkunden und auf Anfrage auch für Privatkunden biete ich einen mobilen Service an. Ich komme direkt zu Ihnen und führe die Reparatur vor Ort durch."
   },
   {
     question: "Gibt es eine Garantie auf die Reparatur?",
-    answer: "Ja, wir geben auf alle unsere Reparaturen eine Garantie. Sollte wider Erwarten etwas nicht zu Ihrer Zufriedenheit sein, bessern wir kostenfrei nach."
+    answer: "Ja, ich gebe auf alle meine Reparaturen eine Garantie. Sollte wider Erwarten etwas nicht zu Ihrer Zufriedenheit sein, bessere ich kostenfrei nach."
   }
 ];
 
@@ -51,7 +51,7 @@ const FAQSection = () => {
             Häufig gestellte <span className="text-primary">Fragen</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Finden Sie Antworten auf die wichtigsten Fragen rund um unsere Dienstleistungen.
+            Finden Sie Antworten auf die wichtigsten Fragen rund um meine Dienstleistungen.
           </p>
         </div>
 

@@ -17,7 +17,7 @@ const services = [
   {
     icon: Car,
     title: "Parkdellen & Karosserieschäden",
-    description: "Parkrempler, Einkaufswagen-Dellen und kleinere Beulen – wir reparieren sie unsichtbar.",
+    description: "Parkrempler, Einkaufswagen-Dellen und kleinere Beulen – ich repariere sie unsichtbar.",
     features: ["Kleine & mittlere Dellen", "Türkanten", "Kotflügel"]
   },
   {
@@ -53,12 +53,12 @@ const ServicesSection = () => {
       <div className="container-narrow">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-accent font-semibold text-sm uppercase tracking-wider">Unsere Leistungen</span>
+          <span className="text-accent font-semibold text-sm uppercase tracking-wider">Meine Leistungen</span>
           <h2 className="font-display text-3xl md:text-4xl text-foreground mt-3 mb-4">
-            Professionelle <span className="text-primary">Karosseriearbeit</span>
+            Professionelle <span className="text-primary">Dellenreparatur</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Vom kleinen Parkschaden bis zur umfangreichen Hagelreparatur – wir bieten das volle Spektrum.
+            Vom kleinen Parkschaden bis zur umfangreichen Hagelreparatur – ich biete das volle Spektrum.
           </p>
         </div>
 

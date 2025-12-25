@@ -59,7 +59,7 @@ const SchadenMelden = () => {
     
     toast({
       title: "Schaden erfolgreich gemeldet!",
-      description: "Wir prüfen Ihre Anfrage und melden uns innerhalb von 24 Stunden bei Ihnen.",
+      description: "Ich prüfe Ihre Anfrage und melde mich innerhalb von 24 Stunden bei Ihnen.",
     });
     
     setFormData({ name: "", email: "", phone: "", vehicleBrand: "", vehicleModel: "", damageDescription: "" });
@@ -71,7 +71,7 @@ const SchadenMelden = () => {
     <div className="min-h-screen bg-secondary">
       <Header />
       
-      <main className="pt-32 pb-16">
+      <main className="pt-40 pb-16">
         <div className="container-narrow">
           {/* Page Header */}
           <div className="text-center mb-12">
@@ -80,7 +80,7 @@ const SchadenMelden = () => {
               Schaden <span className="text-primary">melden</span>
             </h1>
             <p className="text-secondary-foreground/70 max-w-2xl mx-auto text-lg">
-              Senden Sie uns Fotos Ihres Schadens für eine kostenlose Einschätzung und ein unverbindliches Festpreisangebot.
+              Senden Sie mir Fotos Ihres Schadens für eine kostenlose Einschätzung und ein unverbindliches Festpreisangebot.
             </p>
           </div>
 
@@ -276,27 +276,27 @@ const SchadenMelden = () => {
                 <h3 className="font-display text-xl text-secondary-foreground mb-4">Schneller Kontakt</h3>
                 <div className="space-y-4">
                   <a 
-                    href="tel:+491234567890"
+                    href="tel:+491623236262"
                     className="flex items-center gap-4 p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors group"
                   >
                     <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center group-hover:bg-primary transition-colors">
                       <Phone className="w-5 h-5 text-primary group-hover:text-primary-foreground" />
                     </div>
                     <div>
-                      <p className="text-secondary-foreground/60 text-xs">Rufen Sie uns an</p>
-                      <p className="text-secondary-foreground font-medium">+49 123 456 7890</p>
+                      <p className="text-secondary-foreground/60 text-xs">Rufen Sie mich an</p>
+                      <p className="text-secondary-foreground font-medium">0162 3236262</p>
                     </div>
                   </a>
                   <a 
-                    href="mailto:info@dellenmann.de"
+                    href="mailto:info@dellen-mann.de"
                     className="flex items-center gap-4 p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors group"
                   >
                     <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center group-hover:bg-primary transition-colors">
                       <Mail className="w-5 h-5 text-primary group-hover:text-primary-foreground" />
                     </div>
                     <div>
-                      <p className="text-secondary-foreground/60 text-xs">Schreiben Sie uns</p>
-                      <p className="text-secondary-foreground font-medium">info@dellenmann.de</p>
+                      <p className="text-secondary-foreground/60 text-xs">Schreiben Sie mir</p>
+                      <p className="text-secondary-foreground font-medium">info@dellen-mann.de</p>
                     </div>
                   </a>
                 </div>
@@ -333,13 +333,13 @@ const SchadenMelden = () => {
                     <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
                       <span className="text-accent font-bold text-xs">1</span>
                     </div>
-                    <p className="text-secondary-foreground/70">Sie senden uns Ihre Anfrage mit Fotos</p>
+                    <p className="text-secondary-foreground/70">Sie senden mir Ihre Anfrage mit Fotos</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
                       <span className="text-accent font-bold text-xs">2</span>
                     </div>
-                    <p className="text-secondary-foreground/70">Wir prüfen die Bilder und melden uns innerhalb von 24h</p>
+                    <p className="text-secondary-foreground/70">Ich prüfe die Bilder und melde mich innerhalb von 24h</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">

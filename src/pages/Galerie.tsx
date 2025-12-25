@@ -68,17 +68,8 @@ const GaleriePage = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <main className="pt-32 pb-16">
+      <main className="pt-40 pb-16">
         <div className="container-narrow">
-          {/* Back Link */}
-          <Link 
-            to="/" 
-            className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary mb-8 transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Zurück zur Startseite
-          </Link>
-
           {/* Page Header */}
           <div className="text-center mb-12">
             <span className="text-accent font-semibold text-sm uppercase tracking-wider">Portfolio</span>
@@ -86,7 +77,7 @@ const GaleriePage = () => {
               Vorher-Nachher <span className="text-primary">Galerie</span>
             </h1>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Überzeugen Sie sich selbst von unserer Arbeit. Sehen Sie echte Ergebnisse unserer Dellenreparaturen.
+              Überzeugen Sie sich selbst von meiner Arbeit. Sehen Sie echte Ergebnisse meiner Dellenreparaturen.
             </p>
           </div>
 

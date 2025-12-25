@@ -1,28 +1,52 @@
 import { useState } from "react";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const navItems = [
     { label: "Leistungen", href: "#leistungen" },
     { label: "Prozess", href: "#prozess" },
     { label: "Galerie", href: "/galerie" },
-    { label: "FAQ", href: "#faq" },
     { label: "Kontakt", href: "/kontakt" },
   ];
 
-  const scrollToSection = (href: string) => {
+  const handleNavigation = (href: string) => {
+    setIsMenuOpen(false);
+    
     if (href.startsWith("#")) {
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+      // If we're on the homepage, scroll to section
+      if (location.pathname === "/") {
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      } else {
+        // Navigate to homepage with hash
+        navigate("/" + href);
+        // After navigation, scroll to section
+        setTimeout(() => {
+          const element = document.querySelector(href);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 100);
       }
     }
-    setIsMenuOpen(false);
+  };
+
+  const handleLogoClick = (e: React.MouseEvent) => {
+    if (location.pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      window.scrollTo(0, 0);
+    }
   };
 
   return (
@@ -31,17 +55,17 @@ const Header = () => {
       <div className="hidden md:block bg-dellen-dark py-2">
         <div className="container-narrow flex justify-between items-center text-sm text-secondary-foreground/80">
           <div className="flex items-center gap-6">
-            <a href="tel:+491234567890" className="flex items-center gap-2 hover:text-primary transition-colors">
+            <a href="tel:+491623236262" className="flex items-center gap-2 hover:text-primary transition-colors">
               <Phone className="w-4 h-4" />
-              <span>+49 123 456 7890</span>
+              <span>0162 3236262</span>
             </a>
-            <a href="mailto:info@dellenmann.de" className="flex items-center gap-2 hover:text-primary transition-colors">
+            <a href="mailto:info@dellen-mann.de" className="flex items-center gap-2 hover:text-primary transition-colors">
               <Mail className="w-4 h-4" />
-              <span>info@dellenmann.de</span>
+              <span>info@dellen-mann.de</span>
             </a>
           </div>
           <div className="text-secondary-foreground/60">
-            Mo-Fr: 08:00 - 18:00 | Sa: 09:00 - 14:00
+            Mo-Sa: 09:00 - 20:00 | So: Geschlossen
           </div>
         </div>
       </div>
@@ -50,8 +74,12 @@ const Header = () => {
       <nav className="container-narrow py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <img src={logo} alt="DellenMann Logo" className="h-12 md:h-14 w-auto" />
+          <Link to="/" className="flex items-center group" onClick={handleLogoClick}>
+            <img
+              src={logo}
+              alt="DellenMann Logo"
+              className="h-12 md:h-14 w-auto transition-transform duration-200 ease-out group-hover:scale-105"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -68,7 +96,7 @@ const Header = () => {
               ) : (
                 <button
                   key={item.label}
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() => handleNavigation(item.href)}
                   className="text-secondary-foreground/90 hover:text-primary font-medium transition-colors"
                 >
                   {item.label}
@@ -113,7 +141,7 @@ const Header = () => {
                 ) : (
                   <button
                     key={item.label}
-                    onClick={() => scrollToSection(item.href)}
+                    onClick={() => handleNavigation(item.href)}
                     className="text-secondary-foreground/90 hover:text-primary font-medium transition-colors py-2 text-left"
                   >
                     {item.label}

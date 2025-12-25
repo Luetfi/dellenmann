@@ -19,13 +19,19 @@ const HeroSection = () => {
       <div className="container-narrow relative z-10">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-up">
+          <a
+            href="https://maps.app.goo.gl/XtitGtDHiQBjbYMCA"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-up hover:bg-accent/30 transition-colors"
+            style={{ animationDelay: '0.1s' }}
+          >
             <Star className="w-4 h-4 fill-accent" />
-            <span>4,9 Sterne bei Google</span>
-          </div>
+            <span>5,0 Sterne bei Google</span>
+          </a>
 
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-secondary-foreground leading-tight mb-6 animate-fade-up" style={{ animationDelay: '0.1s' }}>
-            Dellenentfernung{" "}
+            Dellenreparatur{" "}
             <span className="text-primary">ohne Lackieren</span>
             <br />
             <span className="text-secondary-foreground/90">schnell, präzise, professionell</span>
@@ -39,7 +45,7 @@ const HeroSection = () => {
           {/* Mobile Service Highlight */}
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary border border-primary/20 px-5 py-3 rounded-xl text-sm md:text-base font-medium mb-8 animate-fade-up" style={{ animationDelay: '0.25s' }}>
             <MapPin className="w-5 h-5" />
-            <span>Mobiler Service im Umkreis von 20km um Stuttgart – ich komme zu Ihnen!</span>
+            <span>Mobiler Service im Umkreis von Ludwigsburg – ich komme zu Ihnen!</span>
           </div>
 
           {/* CTAs */}
@@ -60,7 +66,7 @@ const HeroSection = () => {
               className="border-accent bg-accent/10 text-accent hover:bg-accent/20 font-semibold text-lg px-8 py-6"
               asChild
             >
-              <a href="tel:+491234567890">
+              <a href="tel:+491623236262">
                 <Phone className="w-5 h-5 mr-2" />
                 Jetzt anrufen
               </a>
@@ -71,7 +77,7 @@ const HeroSection = () => {
           <div className="flex flex-wrap justify-center gap-6 mt-10 animate-fade-up" style={{ animationDelay: '0.4s' }}>
             <div className="flex items-center gap-2 text-secondary-foreground/60 text-sm">
               <div className="w-2 h-2 bg-accent rounded-full" />
-              <span>Zertifizierte Techniker</span>
+              <span>Erfahrener Dellenmann</span>
             </div>
             <div className="flex items-center gap-2 text-secondary-foreground/60 text-sm">
               <div className="w-2 h-2 bg-accent rounded-full" />

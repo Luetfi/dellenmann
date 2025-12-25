@@ -27,14 +27,14 @@ const advantages = [
   },
   {
     icon: Award,
-    title: "Zertifizierte Techniker",
-    description: "Unsere Spezialisten sind ausgebildet und zertifiziert in der PDR-Technik.",
+    title: "Zertifizierte Expertise",
+    description: "Ich bin ausgebildet und zertifiziert in der PDR-Technik.",
     color: "accent"
   },
   {
     icon: Truck,
     title: "Mobiler Service",
-    description: "Wir kommen zu Ihnen – ob privat, zum Autohaus oder zur Flotte.",
+    description: "Ich komme zu Ihnen – ob privat, zum Autohaus oder zur Flotte.",
     color: "primary"
   }
 ];
@@ -50,7 +50,7 @@ const AdvantagesSection = () => {
             Warum <span className="text-primary">DellenMann</span>?
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Profitieren Sie von unserer Expertise und modernster PDR-Technik für makellose Ergebnisse.
+            Profitieren Sie von meiner Expertise und modernster PDR-Technik für makellose Ergebnisse.
           </p>
         </div>
 
