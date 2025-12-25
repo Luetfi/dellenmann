@@ -7,7 +7,7 @@ const Impressum = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <main className="pt-24 pb-16">
+      <main className="pt-32 md:pt-36 pb-16">
         <div className="container mx-auto px-4 max-w-4xl">
           <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
             Impressum
@@ -21,8 +21,8 @@ const Impressum = () => {
               <p>
                 DellenMann<br />
                 Sercan Sacar<br />
-                [Straße und Hausnummer]<br />
-                [PLZ und Ort]
+                Gansäcker 8<br />
+                74321 Bietigheim-Bissingen
               </p>
             </section>
 
@@ -31,8 +31,8 @@ const Impressum = () => {
                 Kontakt
               </h2>
               <p>
-                Telefon: [Telefonnummer]<br />
-                E-Mail: [E-Mail-Adresse]
+                Telefon: 0162 3236262<br />
+                E-Mail: info@dellen-mann.de
               </p>
             </section>
 
@@ -42,7 +42,7 @@ const Impressum = () => {
               </h2>
               <p>
                 Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
-                [USt-IdNr., falls vorhanden]
+                Keine Umsatzsteuer-Identifikationsnummer (Kleinunternehmer nach § 19 UStG)
               </p>
             </section>
 
@@ -52,7 +52,7 @@ const Impressum = () => {
               </h2>
               <p>
                 Berufsbezeichnung: Dellentechniker / Smart-Repair-Spezialist<br />
-                Zuständige Kammer / berufsrechtliche Regelungen: [falls zutreffend]
+                Zuständige Kammer / berufsrechtliche Regelungen: keine besondere Kammerzugehörigkeit; es gelten die Bestimmungen der Gewerbeordnung (GewO)
               </p>
             </section>
 
@@ -63,8 +63,8 @@ const Impressum = () => {
               <p>
                 Verantwortlich für den Inhalt:<br />
                 Sercan Sacar<br />
-                [Straße und Hausnummer]<br />
-                [PLZ und Ort]
+                Gansäcker 8<br />
+                74321 Bietigheim-Bissingen
               </p>
             </section>
 
