@@ -7,6 +7,7 @@ import ServicesSection from "@/components/sections/ServicesSection";
 import ReviewsSection from "@/components/sections/ReviewsSection";
 import FAQSection from "@/components/sections/FAQSection";
 import ContactSection from "@/components/sections/ContactSection";
+import ConsentGoogleMap from "@/components/ConsentGoogleMap";
 
 const Index = () => {
   return (
@@ -23,15 +24,10 @@ const Index = () => {
       </main>
       <section className="bg-secondary/50">
         <div className="w-full h-[420px]">
-          <iframe
+          <ConsentGoogleMap
             src="https://maps.google.com/maps?q=Gans%C3%A4cker+8,+74321+Bietigheim-Bissingen&t=&z=15&ie=UTF8&iwloc=&output=embed"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
             title="DellenMann Standort"
+            className="w-full h-full"
           />
         </div>
       </section>
