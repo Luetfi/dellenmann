@@ -12,7 +12,7 @@ const Datenschutz = () => {
           <div className="text-center mb-12">
             <span className="text-accent font-semibold text-sm uppercase tracking-wider">Rechtliches</span>
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl text-secondary-foreground mt-3 mb-4">
-              Datenschutzerklärung
+              Datenschutzerklärungtest
             </h1>
           </div>
 
