@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X, Phone, Mail } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
@@ -18,7 +19,7 @@ const Header = () => {
 
   const handleNavigation = (href: string) => {
     setIsMenuOpen(false);
-    
+
     if (href.startsWith("#")) {
       // If we're on the homepage, scroll to section
       if (location.pathname === "/") {
@@ -64,9 +65,7 @@ const Header = () => {
               <span>info@dellen-mann.de</span>
             </a>
           </div>
-          <div className="text-secondary-foreground/60">
-            Mo-Sa: 09:00 - 20:00 | So: Geschlossen
-          </div>
+          <div className="text-secondary-foreground/60">Mo-Sa: 09:00 - 20:00 | So: Geschlossen</div>
         </div>
       </div>
 
@@ -84,7 +83,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
-            {navItems.map((item) => (
+            {navItems.map((item) =>
               item.href.startsWith("/") ? (
                 <Link
                   key={item.label}
@@ -101,25 +100,25 @@ const Header = () => {
                 >
                   {item.label}
                 </button>
-              )
-            ))}
+              ),
+            )}
           </div>
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-4">
-            <Button 
-              asChild
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold btn-glow-red"
+            <Link
+              to="/schaden-melden"
+              className={cn(
+                buttonVariants({ variant: "default" }),
+                "bg-primary hover:bg-primary/90 text-primary-foreground font-semibold btn-glow-red",
+              )}
             >
-              <Link to="/schaden-melden">Schaden melden</Link>
-            </Button>
+              Schaden melden
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden text-secondary-foreground p-2"
-          >
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="lg:hidden text-secondary-foreground p-2">
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
@@ -128,7 +127,7 @@ const Header = () => {
         {isMenuOpen && (
           <div className="lg:hidden mt-4 pb-4 border-t border-border/10 pt-4 animate-fade-in">
             <div className="flex flex-col gap-4">
-              {navItems.map((item) => (
+              {navItems.map((item) =>
                 item.href.startsWith("/") ? (
                   <Link
                     key={item.label}
@@ -146,14 +145,16 @@ const Header = () => {
                   >
                     {item.label}
                   </button>
-                )
-              ))}
-              <Button 
-                asChild
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold mt-2"
+                ),
+              )}
+
+              <Link
+                to="/schaden-melden"
+                onClick={() => setIsMenuOpen(false)}
+                className={cn(buttonVariants({ variant: "default" }), "bg-primary hover:bg-primary/90 text-primary-foreground font-semibold mt-2")}
               >
-                <Link to="/schaden-melden">Schaden melden</Link>
-              </Button>
+                Schaden melden
+              </Link>
             </div>
           </div>
         )}
@@ -163,3 +164,4 @@ const Header = () => {
 };
 
 export default Header;
+
