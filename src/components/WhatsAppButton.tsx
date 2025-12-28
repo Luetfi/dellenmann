@@ -1,11 +1,13 @@
+import { forwardRef } from "react";
 import { MessageCircle } from "lucide-react";
 
-const WhatsAppButton = () => {
-  const phoneNumber = "491623236262"; // Format: country code + number without + or spaces
+const WhatsAppButton = forwardRef<HTMLAnchorElement>((_, ref) => {
+  const phoneNumber = "491623236262";
   const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
   return (
     <a
+      ref={ref}
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
@@ -22,6 +24,8 @@ const WhatsAppButton = () => {
       </div>
     </a>
   );
-};
+});
+
+WhatsAppButton.displayName = "WhatsAppButton";
 
 export default WhatsAppButton;
