@@ -38,8 +38,8 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-secondary-foreground/70 text-lg md:text-xl mb-4 max-w-2xl animate-fade-up" style={{ animationDelay: '0.2s' }}>
-            Ihr Spezialist für lackierfreie Dellenreparatur, Hagelschadenbeseitigung und Smart Repair. 
-            Originalzustand erhalten – bis zu 70% günstiger als Lackieren.
+            Ihr Spezialist für PDR (Paintless Dent Repair), Beulenreparatur und Smart Repair. 
+            Professionelles Ausbeulen ohne Lackieren – bis zu 70% günstiger als herkömmliche Methoden.
           </p>
 
           {/* Mobile Service Highlight */}

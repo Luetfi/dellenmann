@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     question: "Muss ich einen Termin vereinbaren?",
-    answer: "Ja, ich empfehle eine Terminvereinbarung, um Wartezeiten zu vermeiden und ausreichend Zeit für Ihr Fahrzeug einzuplanen. Sie können mich telefonisch erreichen oder das Kontaktformular nutzen."
+    answer: "Ja, ich empfehle eine Terminvereinbarung, um Wartezeiten zu vermeiden und ausreichend Zeit für Ihr Fahrzeug einzuplanen. Sie können mich telefonisch erreichen oder das Schadenmelden-Formular ausfüllen, wo ich Ihnen dann eine Ersteinschätzung geben kann."
   },
   {
     question: "Kann ich Hagelschäden über die Versicherung abrechnen?",
@@ -32,12 +32,8 @@ const faqs = [
   },
   {
     question: "Bieten Sie auch einen mobilen Service an?",
-    answer: "Ja, für Autohäuser, Flottenkunden und auf Anfrage auch für Privatkunden biete ich einen mobilen Service an. Ich komme direkt zu Ihnen und führe die Reparatur vor Ort durch."
+    answer: "Ja, für Autohäuser, Flottenkunden und auf Anfrage auch für Privatkunden biete ich einen mobilen Service im Umkreis von Ludwigsburg an. Ich komme direkt zu Ihnen und führe die Reparatur vor Ort durch."
   },
-  {
-    question: "Gibt es eine Garantie auf die Reparatur?",
-    answer: "Ja, ich gebe auf alle meine Reparaturen eine Garantie. Sollte wider Erwarten etwas nicht zu Ihrer Zufriedenheit sein, bessere ich kostenfrei nach."
-  }
 ];
 
 const FAQSection = () => {

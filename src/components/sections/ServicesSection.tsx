@@ -1,42 +1,36 @@
-import { CircleDot, CloudRain, Car, Paintbrush, Sparkles, Building2, ArrowRight } from "lucide-react";
+import { CircleDot, CloudRain, Car, Truck, AlertTriangle, Building2, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const services = [
   {
     icon: CircleDot,
     title: "Dellenentfernung ohne Lackieren (PDR)",
-    description: "Professionelle Paintless Dent Repair Technik für Dellen aller Art. Der Originallack bleibt erhalten.",
-    features: ["Originalzustand", "Schnelle Reparatur", "Keine Farbunterschiede"]
+    description: "Professionelle Paintless Dent Repair (PDR) für Dellenreparatur & Beulenreparatur. Schonendes Ausbeulen ohne Schleifen, Spachteln oder Lackieren."
   },
   {
     icon: CloudRain,
-    title: "Hagelschaden-Instandsetzung",
-    description: "Spezialisiert auf die lackierfreie Beseitigung von Hagelschäden – auch bei großflächigen Beschädigungen.",
-    features: ["Versicherungsabwicklung", "Großflächige Schäden", "Mobile Teams"]
+    title: "Hagelschaden-Reparatur (PDR)",
+    description: "Viele kleine Dellen nach Unwetter? Wir setzen Ihr Fahrzeug mit PDR (Dent Repair) lackschadenfrei instand. Professionelle Hagelschadenbeseitigung ohne Lackieren."
   },
   {
     icon: Car,
-    title: "Parkdellen & Karosserieschäden",
-    description: "Parkrempler, Einkaufswagen-Dellen und kleinere Beulen – ich repariere sie unsichtbar.",
-    features: ["Kleine & mittlere Dellen", "Türkanten", "Kotflügel"]
+    title: "Beulenservice & Smart Repair",
+    description: "Beulenreparatur bei Parkrempler oder Türkantenschlägen. Smart Repair für Karosserieteile – professionelles Ausbeulen mit PDR-Technik (Dentless Paint Repair)."
   },
   {
-    icon: Paintbrush,
-    title: "Smart Repair",
-    description: "Punktuelle Lackausbesserungen und Kratzerentfernung für kleine Beschädigungen.",
-    features: ["Kratzer", "Steinschläge", "Lackkorrekturen"]
+    icon: Truck,
+    title: "Mobiler Dellenservice (Vor-Ort)",
+    description: "Keine Zeit für die Werkstatt? Mobiler Dent Repair Service – ich komme zu Ihnen nach Hause, ins Büro oder zur Wunschwerkstatt. PDR im Umkreis Ludwigsburg."
   },
   {
-    icon: Sparkles,
-    title: "Fahrzeugaufbereitung",
-    description: "Professionelle Innen- und Außenreinigung für einen makellosen Gesamteindruck.",
-    features: ["Politur", "Versiegelung", "Innenreinigung"]
+    icon: AlertTriangle,
+    title: "Vandalismusschäden reparieren",
+    description: "Nicht jeder Vandalismusschaden muss lackiert werden. Druckbedingte Eindrückungen lassen sich mit PDR (Paintless Dent Repair) oft lackschadenfrei ausbeulen."
   },
   {
     icon: Building2,
-    title: "Flottenservice",
-    description: "Maßgeschneiderte Lösungen für Autohäuser, Leasingfirmen und Versicherungen.",
-    features: ["Volumenrabatte", "Vor-Ort-Service", "Rahmenverträge"]
+    title: "Flottenservice & Gewerbekunden",
+    description: "Professionelle Dellenreparatur für Autohäuser, Leasingfirmen und Fuhrparks. Volumenrabatte, Vor-Ort-Service und flexible Rahmenverträge für Gewerbekunden."
   }
 ];
 
@@ -55,10 +49,10 @@ const ServicesSection = () => {
         <div className="text-center mb-16">
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">Meine Leistungen</span>
           <h2 className="font-display text-3xl md:text-4xl text-foreground mt-3 mb-4">
-            Professionelle <span className="text-primary">Dellenreparatur</span>
+            Professionelle <span className="text-primary">Dellenreparatur & PDR</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Vom kleinen Parkschaden bis zur umfangreichen Hagelreparatur – ich biete das volle Spektrum.
+            Von Beulenreparatur über Smart Repair bis zur Hagelschadenbeseitigung – Dent Repair vom Fachmann.
           </p>
         </div>
 
@@ -79,21 +73,9 @@ const ServicesSection = () => {
                 {service.title}
               </h3>
               
-              <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 {service.description}
               </p>
-
-              {/* Features */}
-              <div className="flex flex-wrap gap-2">
-                {service.features.map((feature) => (
-                  <span 
-                    key={feature}
-                    className="text-xs bg-accent/10 text-accent px-2 py-1 rounded-md"
-                  >
-                    {feature}
-                  </span>
-                ))}
-              </div>
             </div>
           ))}
         </div>

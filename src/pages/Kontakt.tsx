@@ -25,19 +25,54 @@ const Kontakt = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    toast({
-      title: "Nachricht gesendet!",
-      description: "Vielen Dank für Ihre Anfrage. Ich melde mich schnellstmöglich bei Ihnen.",
-    });
-    
-    setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
-    setIsSubmitting(false);
+    try {
+      const formDataToSend = new FormData();
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('phone', formData.phone);
+      formDataToSend.append('subject', formData.subject);
+      formDataToSend.append('message', formData.message);
+      formDataToSend.append('_subject', `Neue Anfrage: ${formData.subject}`);
+      formDataToSend.append('_captcha', 'false');
+      
+      const response = await fetch('https://formsubmit.co/64d36a8c1780b116f05c4d457b916905', {
+        method: 'POST',
+        body: formDataToSend
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Erfolg!",
+          description: "Ihre Nachricht wurde erfolgreich versendet.",
+        });
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: ""
+        });
+      } else {
+        toast({
+          title: "Fehler",
+          description: "Es gab ein Problem beim Versenden. Bitte versuchen Sie es später erneut.",
+          variant: "destructive"
+        });
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast({
+        title: "Fehler",
+        description: "Es gab ein Problem beim Versenden. Bitte versuchen Sie es später erneut.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (

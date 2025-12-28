@@ -5,25 +5,25 @@ const steps = [
     number: "01",
     icon: MessageSquare,
     title: "Kontakt aufnehmen",
-    description: "Rufen Sie mich an oder nutzen Sie mein Kontaktformular mit Foto-Upload für eine erste Einschätzung."
+    description: "Kontaktieren Sie mich telefonisch oder füllen Sie das Schadenmelden-Formular mit Fotos aus, um eine erste Einschätzung zu erhalten."
   },
   {
     number: "02",
     icon: Search,
     title: "Begutachtung",
-    description: "Ich analysiere den Schaden vor Ort oder über die Fotos vom Schaden-melden-Formular und erstelle ein kostenloses Festpreisangebot."
+    description: "Ich analysiere den Schaden vor Ort oder über Ihre Fotos und erstelle Ihnen ein kostenloses und unverbindliches Festpreisangebot."
   },
   {
     number: "03",
     icon: Wrench,
     title: "Reparatur",
-    description: "Ich behebe die Dellen präzise und lackierfrei mit professioneller PDR-Technik. Der Originallack bleibt dabei vollständig erhalten – für ein perfektes Ergebnis."
+    description: "Ich behebe die Dellen präzise mit professioneller PDR-Technik. Der Originallack bleibt dabei vollständig erhalten und unversehrt."
   },
   {
     number: "04",
     icon: CheckCircle,
     title: "Qualitätscheck",
-    description: "Nach gründlicher Endkontrolle übergebe ich Ihnen Ihr makelloses Fahrzeug."
+    description: "Nach gründlicher Endkontrolle übergebe ich Ihnen Ihr makelloses und reparierten Fahrzeug in perfektem Zustand."
   }
 ];
 

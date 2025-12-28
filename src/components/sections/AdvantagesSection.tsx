@@ -27,8 +27,8 @@ const advantages = [
   },
   {
     icon: Award,
-    title: "Zertifizierte Expertise",
-    description: "Ich bin ausgebildet und zertifiziert in der PDR-Technik.",
+    title: "Erfahrung",
+    description: "Jahrelange Erfahrung in der professionellen Dellenentfernung – jede Delle wird mit höchster Präzision behandelt.",
     color: "accent"
   },
   {

@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { Phone, Mail, Upload, X, Send, Car, Camera, CheckCircle } from "lucide-react";
+import { Phone, Mail, Upload, X, Send, Car, Camera, CheckCircle, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import ConsentGoogleMap from "@/components/ConsentGoogleMap";
 
 const SchadenMelden = () => {
   const { toast } = useToast();
@@ -51,20 +52,61 @@ const SchadenMelden = () => {
     setUploadedFiles(prev => prev.filter((_, i) => i !== index));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    toast({
-      title: "Schaden erfolgreich gemeldet!",
-      description: "Ich prüfe Ihre Anfrage und melde mich innerhalb von 24 Stunden bei Ihnen.",
-    });
-    
-    setFormData({ name: "", email: "", phone: "", vehicleBrand: "", vehicleModel: "", damageDescription: "" });
-    setUploadedFiles([]);
-    setIsSubmitting(false);
+    try {
+      const formDataToSend = new FormData();
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('phone', formData.phone);
+      formDataToSend.append('vehicle', `${formData.vehicleBrand} ${formData.vehicleModel}`);
+      formDataToSend.append('damage_description', formData.damageDescription);
+      formDataToSend.append('_subject', 'Neue Schadenmeldung eingegangen');
+      formDataToSend.append('_captcha', 'false');
+      
+      // Add files
+      uploadedFiles.forEach((file, index) => {
+        formDataToSend.append(`file${index + 1}`, file);
+      });
+      
+      const response = await fetch('https://formsubmit.co/64d36a8c1780b116f05c4d457b916905', {
+        method: 'POST',
+        body: formDataToSend
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Erfolg!",
+          description: "Ihre Schadenmeldung wurde erfolgreich versendet.",
+        });
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          vehicleBrand: "",
+          vehicleModel: "",
+          damageDescription: ""
+        });
+        setUploadedFiles([]);
+      } else {
+        toast({
+          title: "Fehler",
+          description: "Es gab ein Problem beim Versenden. Bitte versuchen Sie es später erneut.",
+          variant: "destructive"
+        });
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast({
+        title: "Fehler",
+        description: "Es gab ein Problem beim Versenden. Bitte versuchen Sie es später erneut.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -223,6 +265,7 @@ const SchadenMelden = () => {
                   <input
                     ref={fileInputRef}
                     type="file"
+                    name="file"
                     accept="image/*"
                     multiple
                     onChange={handleFileUpload}
@@ -349,6 +392,23 @@ const SchadenMelden = () => {
                   </div>
                 </div>
               </div>
+
+              {/* Map */}
+              <div className="bg-dellen-dark rounded-xl overflow-hidden h-64">
+                <ConsentGoogleMap
+                  src="https://maps.google.com/maps?q=Gansäcker+8,+74321+Bietigheim-Bissingen&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  title="DellenMann Standort"
+                  className="w-full h-full"
+                />
+              </div>
+              <a
+                href="https://maps.app.goo.gl/5rr36bvcdiyF6hMKA"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 text-accent hover:text-accent/80 text-sm font-medium mt-3"
+              >
+                Route in Google Maps öffnen
+              </a>
             </div>
           </div>
         </div>
