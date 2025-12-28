@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://dellenmann.de/sitemap.xml
+Sitemap: https://dellen-mann.de/sitemap.xml
