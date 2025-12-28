@@ -8,6 +8,7 @@ import { useToast } from "@/hooks/use-toast";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ConsentGoogleMap from "@/components/ConsentGoogleMap";
+import SEOHead from "@/components/SEOHead";
 
 const SchadenMelden = () => {
   const { toast } = useToast();
@@ -111,20 +112,26 @@ const SchadenMelden = () => {
 
   return (
     <div className="min-h-screen bg-secondary">
+      <SEOHead
+        title="Schaden melden | Dellenreparatur Kostenvoranschlag | Dellenmann Ludwigsburg"
+        description="Melden Sie Ihren Fahrzeugschaden für eine kostenlose Einschätzung. Dellenentfernung, Beulenreparatur, Hagelschaden, Parkdellen – laden Sie Fotos hoch und erhalten Sie ein Festpreisangebot vom Dellentechniker."
+        keywords="Schaden melden, Dellenreparatur Angebot, Kostenvoranschlag Beulenreparatur, Hagelschaden melden, Parkdelle Kosten, Auto Delle Preis, Dellentechniker Anfrage"
+        canonicalUrl="/schaden-melden"
+      />
       <Header />
       
       <main className="pt-40 pb-16">
         <div className="container-narrow">
           {/* Page Header */}
-          <div className="text-center mb-12">
+          <header className="text-center mb-12">
             <span className="text-accent font-semibold text-sm uppercase tracking-wider">Schadensmeldung</span>
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl text-secondary-foreground mt-3 mb-4">
-              Schaden <span className="text-primary">melden</span>
+              Delle oder Beule <span className="text-primary">melden</span>
             </h1>
             <p className="text-secondary-foreground/70 max-w-2xl mx-auto text-lg">
-              Senden Sie mir Fotos Ihres Schadens für eine kostenlose Einschätzung und ein unverbindliches Festpreisangebot.
+              Senden Sie mir Fotos Ihrer Delle, Beule oder Hagelschaden für eine kostenlose Einschätzung und ein unverbindliches Festpreisangebot zur Dellenreparatur.
             </p>
-          </div>
+          </header>
 
           {/* Info Banner */}
           <div className="bg-accent/10 border border-accent/20 rounded-xl p-6 mb-12 flex flex-col md:flex-row items-center gap-4">
@@ -132,9 +139,9 @@ const SchadenMelden = () => {
               <CheckCircle className="w-6 h-6 text-accent" />
             </div>
             <div className="text-center md:text-left">
-              <h3 className="font-semibold text-secondary-foreground mb-1">Kostenlose Schadenseinschätzung</h3>
+              <h2 className="font-semibold text-secondary-foreground mb-1">Kostenlose Schadenseinschätzung für Dellenreparatur</h2>
               <p className="text-secondary-foreground/70 text-sm">
-                Laden Sie einfach Fotos hoch und erhalten Sie innerhalb von 24 Stunden ein unverbindliches Angebot.
+                Laden Sie einfach Fotos Ihrer Delle oder Beule hoch und erhalten Sie innerhalb von 24 Stunden ein unverbindliches Angebot vom Dellentechniker.
               </p>
             </div>
           </div>

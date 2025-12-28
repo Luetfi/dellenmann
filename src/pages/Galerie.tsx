@@ -1,24 +1,25 @@
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import SEOHead from "@/components/SEOHead";
 
 interface GalleryItem {
   id: number;
   title: string;
   beforeImage: string;
   afterImage: string;
+  alt: string;
 }
 
-// Placeholder gallery items - nur 6 Bilder
+// Gallery items mit SEO-optimierten Alt-Tags
 const galleryItems: GalleryItem[] = [
-  { id: 1, title: "Reparatur 1", beforeImage: "/src/assets/Vorher1.jpg", afterImage: "/src/assets/Nachher1.jpg" },
-  { id: 2, title: "Reparatur 2", beforeImage: "/src/assets/Vorher2.jpg", afterImage: "/src/assets/Nachher2.jpg" },
-  { id: 3, title: "Reparatur 3", beforeImage: "/src/assets/Vorher3.jpg", afterImage: "/src/assets/Nachher3.jpg" },
-  { id: 4, title: "Reparatur 4", beforeImage: "/src/assets/Vorher4.jpg", afterImage: "/src/assets/Nachher4.jpg" },
-  { id: 5, title: "Reparatur 5", beforeImage: "/src/assets/Vorher5.jpg", afterImage: "/src/assets/Nachher5.jpg" },
-  { id: 6, title: "Reparatur 6", beforeImage: "/src/assets/Vorher6.jpg", afterImage: "/src/assets/Nachher6.jpg" },
+  { id: 1, title: "Dellenreparatur Motorhaube", beforeImage: "/src/assets/Vorher1.jpg", afterImage: "/src/assets/Nachher1.jpg", alt: "Dellenentfernung Motorhaube - Vorher Nachher Bild PDR Reparatur" },
+  { id: 2, title: "Parkdelle Kotflügel", beforeImage: "/src/assets/Vorher2.jpg", afterImage: "/src/assets/Nachher2.jpg", alt: "Parkdellen entfernen am Kotflügel - Beulenreparatur ohne Lackieren" },
+  { id: 3, title: "Hagelschaden Dach", beforeImage: "/src/assets/Vorher3.jpg", afterImage: "/src/assets/Nachher3.jpg", alt: "Hagelschaden Reparatur Autodach - Lackfreie Dellenentfernung" },
+  { id: 4, title: "Türdelle Smart Repair", beforeImage: "/src/assets/Vorher4.jpg", afterImage: "/src/assets/Nachher4.jpg", alt: "Smart Repair Türdelle - Dellen reparieren lassen vom Dellentechniker" },
+  { id: 5, title: "Karosserieschaden Reparatur", beforeImage: "/src/assets/Vorher5.jpg", afterImage: "/src/assets/Nachher5.jpg", alt: "Karosserieschaden Reparatur - Auto Dellen Reparatur Ludwigsburg" },
+  { id: 6, title: "Beulenreparatur Seitenteil", beforeImage: "/src/assets/Vorher6.jpg", afterImage: "/src/assets/Nachher6.jpg", alt: "Beulenreparatur Seitenteil - Beulendoktor Dellenmann Ergebnis" },
 ];
 
 const GaleriePage = () => {
@@ -62,27 +63,47 @@ const GaleriePage = () => {
     setSliderPosition(Math.max(0, Math.min(100, percentage)));
   };
 
+  // ImageGallery Schema für strukturierte Daten
+  const imageGallerySchema = {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    name: "Dellenreparatur Vorher-Nachher Galerie",
+    description: "Professionelle Dellenentfernung und Beulenreparatur - echte Ergebnisse unserer PDR Arbeit",
+    image: galleryItems.map((item) => ({
+      "@type": "ImageObject",
+      name: item.title,
+      description: item.alt,
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Dellenreparatur Vorher-Nachher Galerie | Ergebnisse PDR Dellenmann"
+        description="Sehen Sie echte Vorher-Nachher Ergebnisse unserer Dellenreparaturen. Professionelle Dellenentfernung, Beulenreparatur, Hagelschaden Reparatur und Smart Repair vom Dellentechniker in Ludwigsburg."
+        keywords="Dellenreparatur Vorher Nachher, Dellen entfernen Ergebnisse, PDR Galerie, Beulenreparatur Bilder, Hagelschaden Reparatur Fotos, Dellenmann Ergebnisse, Beulendoktor Arbeit"
+        canonicalUrl="/galerie"
+        structuredData={imageGallerySchema}
+      />
       <Header />
       
       <main className="pt-40 pb-16">
         <div className="container-narrow">
           {/* Page Header */}
-          <div className="text-center mb-12">
-            <span className="text-accent font-semibold text-sm uppercase tracking-wider">Vorher-Nachher</span>
+          <header className="text-center mb-12">
+            <span className="text-accent font-semibold text-sm uppercase tracking-wider">Vorher-Nachher Galerie</span>
             <h1 className="font-display text-4xl md:text-5xl text-foreground mt-3 mb-4">
-              <span className="text-primary">Ergebnisse</span>
+              Dellenreparatur <span className="text-primary">Ergebnisse</span>
             </h1>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Überzeugen Sie sich selbst von meiner Arbeit. Sehen Sie echte Ergebnisse meiner Dellenreparaturen.
+              Überzeugen Sie sich selbst von meiner Arbeit als Dellentechniker. Echte Vorher-Nachher Bilder meiner professionellen Dellenentfernung, Beulenreparatur und Hagelschaden-Beseitigung.
             </p>
-          </div>
+          </header>
 
           {/* Gallery Grid - 3 Spalten für 6 Bilder */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredItems.map((item, index) => (
-              <div 
+              <article 
                 key={item.id}
                 onClick={() => openLightbox(index)}
                 className="group cursor-pointer animate-fade-up"
@@ -95,7 +116,9 @@ const GaleriePage = () => {
                     {item.beforeImage && (
                       <img 
                         src={item.beforeImage} 
-                        alt="Vorher" 
+                        alt={`${item.alt} - Vorher`}
+                        title={`${item.title} - Vor der Dellenreparatur`}
+                        loading="lazy"
                         className="w-full h-full object-cover"
                       />
                     )}
@@ -106,7 +129,9 @@ const GaleriePage = () => {
                     {item.afterImage && (
                       <img 
                         src={item.afterImage} 
-                        alt="Nachher" 
+                        alt={`${item.alt} - Nachher`}
+                        title={`${item.title} - Nach der Dellenreparatur`}
+                        loading="lazy"
                         className="w-full h-full object-cover"
                       />
                     )}
@@ -117,7 +142,10 @@ const GaleriePage = () => {
                     Vorher/Nachher
                   </div>
                 </div>
-              </div>
+                
+                {/* Title for SEO */}
+                <h2 className="sr-only">{item.title}</h2>
+              </article>
             ))}
           </div>
 
@@ -159,7 +187,7 @@ const GaleriePage = () => {
                 {filteredItems[currentIndex]?.afterImage && (
                   <img 
                     src={filteredItems[currentIndex].afterImage} 
-                    alt="Nachher" 
+                    alt={`${filteredItems[currentIndex].alt} - Nachher`}
                     className="w-full h-full object-cover pointer-events-none"
                   />
                 )}
@@ -173,7 +201,7 @@ const GaleriePage = () => {
                 {filteredItems[currentIndex]?.beforeImage && (
                   <img 
                     src={filteredItems[currentIndex].beforeImage} 
-                    alt="Vorher" 
+                    alt={`${filteredItems[currentIndex].alt} - Vorher`}
                     className="w-full h-full object-cover"
                   />
                 )}
@@ -222,7 +250,7 @@ const GaleriePage = () => {
               {/* Title and Counter */}
               <div className="text-center flex-1">
                 <h3 className="text-white font-display font-semibold text-2xl mb-2">
-                  Reparatur {currentIndex + 1}
+                  {filteredItems[currentIndex]?.title}
                 </h3>
                 <p className="text-white/60 text-sm">
                   {currentIndex + 1} / {filteredItems.length}

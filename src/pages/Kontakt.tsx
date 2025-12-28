@@ -8,6 +8,7 @@ import { useToast } from "@/hooks/use-toast";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ConsentGoogleMap from "@/components/ConsentGoogleMap";
+import SEOHead from "@/components/SEOHead";
 
 const Kontakt = () => {
   const { toast } = useToast();
@@ -77,21 +78,27 @@ const Kontakt = () => {
 
   return (
     <div className="min-h-screen bg-secondary">
+      <SEOHead
+        title="Kontakt Dellenreparatur Ludwigsburg | Dellentechniker Dellenmann"
+        description="Kontaktieren Sie den Dellenmann für professionelle Dellenentfernung, Beulenreparatur und Smart Repair in Ludwigsburg. Rufen Sie an: 0162 3236262 oder schreiben Sie uns!"
+        keywords="Dellenreparatur Kontakt, Dellentechniker Ludwigsburg, Beulendoktor Telefon, Dellenmann Anfrage, Smart Repair Kontakt, Hagelschaden Reparatur anfragen"
+        canonicalUrl="/kontakt"
+      />
       <Header />
       
       <main className="pt-40 pb-16">
         <div className="container-narrow">
           {/* Page Header */}
-          <div className="text-center mb-12">
+          <header className="text-center mb-12">
             <span className="text-accent font-semibold text-sm uppercase tracking-wider">Kontakt</span>
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl text-secondary-foreground mt-3 mb-4">
-              Allgemeine <span className="text-primary">Anfragen</span>
+              Dellenreparatur <span className="text-primary">Anfrage</span>
             </h1>
             <p className="text-secondary-foreground/70 max-w-2xl mx-auto text-lg">
-              Haben Sie Fragen zu meinen Leistungen oder möchten Sie mehr erfahren? 
-              Kontaktieren Sie mich – ich helfe Ihnen gerne weiter.
+              Haben Sie Fragen zu Dellenentfernung, Beulenreparatur oder Smart Repair? 
+              Kontaktieren Sie mich als Ihren Dellentechniker in Ludwigsburg – ich helfe Ihnen gerne weiter.
             </p>
-          </div>
+          </header>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
