@@ -1,9 +1,11 @@
+import { forwardRef } from "react";
 import { Cookie } from "lucide-react";
 import { reopenCookieBanner } from "./CookieBanner";
 
-const CookieSettingsButton = () => {
+const CookieSettingsButton = forwardRef<HTMLButtonElement>((_, ref) => {
   return (
     <button
+      ref={ref}
       onClick={reopenCookieBanner}
       className="fixed bottom-6 left-6 z-40 group"
       aria-label="Cookie-Einstellungen öffnen"
@@ -18,6 +20,8 @@ const CookieSettingsButton = () => {
       </div>
     </button>
   );
-};
+});
+
+CookieSettingsButton.displayName = "CookieSettingsButton";
 
 export default CookieSettingsButton;
