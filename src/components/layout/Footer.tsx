@@ -22,10 +22,10 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="lg:col-span-1">
             <Link to="/" onClick={handleLogoClick}>
-              <img src={logo} alt="DellenMann Logo" className="h-12 w-auto mb-4 cursor-pointer hover:opacity-80 transition-opacity" />
+              <img src={logo} alt="DellenMann Logo - Dellenreparatur & Beulenreparatur Ludwigsburg" className="h-12 w-auto mb-4 cursor-pointer hover:opacity-80 transition-opacity" />
             </Link>
             <p className="text-secondary-foreground/70 text-sm leading-relaxed">
-              Ihr Spezialist für Dellenentfernung ohne Lackieren. Professionell, schnell und zu fairen Preisen.
+              Ihr Dellentechniker & Beulendoktor für professionelle Dellenentfernung ohne Lackieren in Ludwigsburg und Umgebung. PDR, Smart Repair & Hagelschaden Reparatur.
             </p>
             <div className="flex gap-4 mt-6">
               <a

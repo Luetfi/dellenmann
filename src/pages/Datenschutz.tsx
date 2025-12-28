@@ -1,20 +1,27 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const Datenschutz = () => {
   return (
     <div className="min-h-screen bg-secondary">
+      <SEOHead
+        title="Datenschutzerklärung | Dellenmann Ludwigsburg"
+        description="Datenschutzerklärung des Dellenmann - Informationen zur Datenverarbeitung, Cookies und Ihren Rechten gemäß DSGVO."
+        canonicalUrl="/datenschutz"
+        noIndex={true}
+      />
       <Header />
       
       <main className="pt-40 pb-16">
         <div className="container-narrow">
           {/* Page Header */}
-          <div className="text-center mb-12">
+          <header className="text-center mb-12">
             <span className="text-accent font-semibold text-sm uppercase tracking-wider">Rechtliches</span>
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl text-secondary-foreground mt-3 mb-4">
               Datenschutzerklärung
             </h1>
-          </div>
+          </header>
 
           {/* Content */}
           <div className="bg-dellen-dark rounded-2xl p-8 md:p-12 animate-fade-up">
