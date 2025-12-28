@@ -76,7 +76,7 @@ const Header = () => {
           <Link to="/" className="flex items-center group" onClick={handleLogoClick}>
             <img
               src={logo}
-              alt="DellenMann Logo"
+              alt="DellenMann Logo - Dellentechniker für Dellenreparatur und Beulenreparatur in Ludwigsburg"
               className="h-12 md:h-14 w-auto transition-transform duration-200 ease-out group-hover:scale-105"
             />
           </Link>
