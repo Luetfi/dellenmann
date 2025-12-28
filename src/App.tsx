@@ -26,7 +26,7 @@ const App = () => (
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/galerie" element={<Galerie />} />
+          <Route path="/ergebnisse" element={<Galerie />} />
           <Route path="/kontakt" element={<Kontakt />} />
           <Route path="/schaden-melden" element={<SchadenMelden />} />
           <Route path="/impressum" element={<Impressum />} />
