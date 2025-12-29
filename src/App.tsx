@@ -8,7 +8,7 @@ import CookieBanner from "@/components/CookieBanner";
 import CookieSettingsButton from "@/components/CookieSettingsButton";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Index from "./pages/Index";
-import Galerie from "./pages/Galerie";
+import Ergebnisse from "./pages/Ergebnisse";
 import Kontakt from "./pages/Kontakt";
 import SchadenMelden from "./pages/SchadenMelden";
 import Impressum from "./pages/Impressum";
@@ -26,7 +26,7 @@ const App = () => (
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/galerie" element={<Galerie />} />
+          <Route path="/ergebnisse" element={<Ergebnisse />} />
           <Route path="/kontakt" element={<Kontakt />} />
           <Route path="/schaden-melden" element={<SchadenMelden />} />
           <Route path="/impressum" element={<Impressum />} />

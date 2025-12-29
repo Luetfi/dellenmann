@@ -4,6 +4,20 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SEOHead from "@/components/SEOHead";
 
+// Import all images
+import Vorher1 from "@/assets/Vorher1.jpg";
+import Nachher1 from "@/assets/Nachher1.jpg";
+import Vorher2 from "@/assets/Vorher2.jpg";
+import Nachher2 from "@/assets/Nachher2.jpg";
+import Vorher3 from "@/assets/Vorher3.jpg";
+import Nachher3 from "@/assets/Nachher3.jpg";
+import Vorher4 from "@/assets/Vorher4.jpg";
+import Nachher4 from "@/assets/Nachher4.jpg";
+import Vorher5 from "@/assets/Vorher5.jpg";
+import Nachher5 from "@/assets/Nachher5.jpg";
+import Vorher6 from "@/assets/Vorher6.jpg";
+import Nachher6 from "@/assets/Nachher6.jpg";
+
 interface GalleryItem {
   id: number;
   title: string;
@@ -14,15 +28,15 @@ interface GalleryItem {
 
 // Gallery items mit SEO-optimierten Alt-Tags
 const galleryItems: GalleryItem[] = [
-  { id: 1, title: "Dellenreparatur Motorhaube", beforeImage: "/src/assets/Vorher1.jpg", afterImage: "/src/assets/Nachher1.jpg", alt: "Dellenentfernung Motorhaube - Vorher Nachher Bild PDR Reparatur" },
-  { id: 2, title: "Parkdelle Kotflügel", beforeImage: "/src/assets/Vorher2.jpg", afterImage: "/src/assets/Nachher2.jpg", alt: "Parkdellen entfernen am Kotflügel - Beulenreparatur ohne Lackieren" },
-  { id: 3, title: "Hagelschaden Dach", beforeImage: "/src/assets/Vorher3.jpg", afterImage: "/src/assets/Nachher3.jpg", alt: "Hagelschaden Reparatur Autodach - Lackfreie Dellenentfernung" },
-  { id: 4, title: "Türdelle Smart Repair", beforeImage: "/src/assets/Vorher4.jpg", afterImage: "/src/assets/Nachher4.jpg", alt: "Smart Repair Türdelle - Dellen reparieren lassen vom Dellentechniker" },
-  { id: 5, title: "Karosserieschaden Reparatur", beforeImage: "/src/assets/Vorher5.jpg", afterImage: "/src/assets/Nachher5.jpg", alt: "Karosserieschaden Reparatur - Auto Dellen Reparatur Ludwigsburg" },
-  { id: 6, title: "Beulenreparatur Seitenteil", beforeImage: "/src/assets/Vorher6.jpg", afterImage: "/src/assets/Nachher6.jpg", alt: "Beulenreparatur Seitenteil - Beulendoktor Dellenmann Ergebnis" },
+  { id: 1, title: "Dellenreparatur Motorhaube", beforeImage: Vorher1, afterImage: Nachher1, alt: "Dellenentfernung Motorhaube - Vorher Nachher Bild PDR Reparatur" },
+  { id: 2, title: "Parkdelle Kotflügel", beforeImage: Vorher2, afterImage: Nachher2, alt: "Parkdellen entfernen am Kotflügel - Beulenreparatur ohne Lackieren" },
+  { id: 3, title: "Hagelschaden Dach", beforeImage: Vorher3, afterImage: Nachher3, alt: "Hagelschaden Reparatur Autodach - Lackfreie Dellenentfernung" },
+  { id: 4, title: "Türdelle Smart Repair", beforeImage: Vorher4, afterImage: Nachher4, alt: "Smart Repair Türdelle - Dellen reparieren lassen vom Dellentechniker" },
+  { id: 5, title: "Karosserieschaden Reparatur", beforeImage: Vorher5, afterImage: Nachher5, alt: "Karosserieschaden Reparatur - Auto Dellen Reparatur Ludwigsburg" },
+  { id: 6, title: "Beulenreparatur Seitenteil", beforeImage: Vorher6, afterImage: Nachher6, alt: "Beulenreparatur Seitenteil - Beulendoktor Dellenmann Ergebnis" },
 ];
 
-const GaleriePage = () => {
+const ErgebnissePage = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [sliderPosition, setSliderPosition] = useState(50);
@@ -82,7 +96,7 @@ const GaleriePage = () => {
         title="Dellenreparatur Vorher-Nachher Galerie | Ergebnisse PDR Dellenmann"
         description="Sehen Sie echte Vorher-Nachher Ergebnisse unserer Dellenreparaturen. Professionelle Dellenentfernung, Beulenreparatur, Hagelschaden Reparatur und Smart Repair vom Dellentechniker in Ludwigsburg."
         keywords="Dellenreparatur Vorher Nachher, Dellen entfernen Ergebnisse, PDR Galerie, Beulenreparatur Bilder, Hagelschaden Reparatur Fotos, Dellenmann Ergebnisse, Beulendoktor Arbeit"
-        canonicalUrl="/galerie"
+        canonicalUrl="/ergebnisse"
         structuredData={imageGallerySchema}
       />
       <Header />
@@ -275,4 +289,4 @@ const GaleriePage = () => {
   );
 };
 
-export default GaleriePage;
+export default ErgebnissePage;
