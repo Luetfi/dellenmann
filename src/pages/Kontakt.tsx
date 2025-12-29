@@ -92,7 +92,7 @@ const Kontakt = () => {
           <header className="text-center mb-12">
             <span className="text-accent font-semibold text-sm uppercase tracking-wider">Kontakt</span>
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl text-secondary-foreground mt-3 mb-4">
-              Dellenreparatur <span className="text-primary">Anfrage</span>
+              Allgemeine <span className="text-primary">Anfrage</span>
             </h1>
             <p className="text-secondary-foreground/70 max-w-2xl mx-auto text-lg">
               Haben Sie Fragen zu Dellenentfernung, Beulenreparatur oder Smart Repair? 

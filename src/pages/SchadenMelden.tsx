@@ -126,7 +126,7 @@ const SchadenMelden = () => {
           <header className="text-center mb-12">
             <span className="text-accent font-semibold text-sm uppercase tracking-wider">Schadensmeldung</span>
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl text-secondary-foreground mt-3 mb-4">
-              Delle oder Beule <span className="text-primary">melden</span>
+              Schaden <span className="text-primary">melden</span>
             </h1>
             <p className="text-secondary-foreground/70 max-w-2xl mx-auto text-lg">
               Senden Sie mir Fotos Ihrer Delle, Beule oder Hagelschaden für eine kostenlose Einschätzung und ein unverbindliches Festpreisangebot zur Dellenreparatur.
