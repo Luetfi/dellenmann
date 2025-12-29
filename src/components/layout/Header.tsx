@@ -21,22 +21,10 @@ const Header = () => {
     setIsMenuOpen(false);
 
     if (href.startsWith("#")) {
-      // If we're on the homepage, scroll to section
-      if (location.pathname === "/") {
-        const element = document.querySelector(href);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
-        }
-      } else {
-        // Navigate to homepage with hash
-        navigate("/" + href);
-        // After navigation, scroll to section
-        setTimeout(() => {
-          const element = document.querySelector(href);
-          if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
-          }
-        }, 100);
+      // Only scroll to section, don't change URL
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }
   };
